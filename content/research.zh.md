@@ -4,7 +4,7 @@ summary: "王雨鑫的研究方向与研究经历。"
 experience:
   title: "The United States as an Active Industrial Policy Nation"
   role: "研究助理，清华大学"
-  supervisors: "鞠建东、李云坤"
+  supervisors: "鞠建东、李元坤"
   paper_label: "NBER Working Paper 34744"
   paper_url: "https://www.nber.org/papers/w34744"
   pdf_url: "/uploads/w34744.pdf"
