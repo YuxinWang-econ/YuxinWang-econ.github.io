@@ -1,37 +1,45 @@
 {{ define "main" }}
   <article class="home-page">
     <section class="hero" aria-labelledby="hero-name">
-      <p class="eyebrow">{{ .Params.hero.position }}<br>{{ .Params.hero.institution }}</p>
-      <h1 id="hero-name">{{ .Params.hero.name }}</h1>
-      <p class="research-fields">{{ .Params.hero.interests }}</p>
-      <p class="statement">{{ .Params.hero.statement }}</p>
-      <div class="actions">
-        {{ range .Params.hero.actions }}
-          <a class="button" href="{{ .url }}"{{ if .download }} download{{ end }}{{ if .external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .label }}</a>
-        {{ end }}
+      <div class="hero-primary">
+        <h1 id="hero-name">{{ .Params.hero.name }}</h1>
+        <p class="statement">{{ .Params.hero.statement }}</p>
+        <div class="actions">
+          {{ range .Params.hero.actions }}
+            <a class="button {{ .style }}" href="{{ .url }}"{{ if .download }} download{{ end }}{{ if .external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .label }}</a>
+          {{ end }}
+        </div>
       </div>
+
+      <aside class="hero-metadata" aria-label="{{ if eq .Site.Language.Lang "zh" }}学术信息{{ else }}Academic profile{{ end }}">
+        <div class="metadata-group">
+          <p class="metadata-label">{{ if eq .Site.Language.Lang "zh" }}当前职位{{ else }}Current Position{{ end }}</p>
+          <p class="metadata-value"><strong>{{ .Params.hero.position }}</strong><br>{{ .Params.hero.institution }}</p>
+        </div>
+        <div class="metadata-group">
+          <p class="metadata-label">{{ if eq .Site.Language.Lang "zh" }}研究领域{{ else }}Research Fields{{ end }}</p>
+          <ul class="field-list">
+            {{ range .Params.hero.fields }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </aside>
     </section>
 
-    <section class="home-content">
-      {{ .Content }}
-    </section>
-
-    <section class="current-research" aria-labelledby="current-research-title">
-      <h2 id="current-research-title">{{ if eq .Site.Language.Lang "zh" }}当前研究{{ else }}Current Research{{ end }}</h2>
-      <div class="research-entry">
-        <h3>{{ .Params.current_research.title }}</h3>
-        <p class="entry-role">{{ .Params.current_research.position }}<br>{{ .Params.current_research.institution }}</p>
-        <dl>
-          <div>
-            <dt>{{ if eq .Site.Language.Lang "zh" }}指导教授{{ else }}Supervisors{{ end }}</dt>
-            <dd>{{ delimit .Params.current_research.supervisors "<br>" | safeHTML }}</dd>
-          </div>
-          <div>
-            <dt>{{ if eq .Site.Language.Lang "zh" }}研究成果{{ else }}Output{{ end }}</dt>
-            <dd>{{ .Params.current_research.output }}</dd>
-          </div>
-        </dl>
-      </div>
+    <section class="selected-research" aria-labelledby="selected-research-title">
+      <h2 id="selected-research-title">{{ if eq .Site.Language.Lang "zh" }}代表性研究经历{{ else }}Selected Research Experience{{ end }}</h2>
+      <article class="featured-research-entry">
+        <div class="research-heading">
+          <h3>{{ .Params.current_research.title }}</h3>
+          <p class="entry-role">{{ .Params.current_research.position }}, {{ .Params.current_research.institution }}</p>
+        </div>
+        <div class="research-metadata">
+          <p><span class="metadata-label">{{ if eq .Site.Language.Lang "zh" }}指导教授{{ else }}Supervisors{{ end }}</span>{{ delimit .Params.current_research.supervisors ", " }}</p>
+          <p><span class="related-output">{{ if eq .Site.Language.Lang "zh" }}相关成果：{{ else }}Related output: {{ end }}</span><a class="output-link" href="{{ .Params.current_research.output_url }}" target="_blank" rel="noopener noreferrer">{{ .Params.current_research.output }}</a></p>
+        </div>
+      </article>
+      <a class="text-link" href="{{ relLangURL "research/" }}">{{ if eq .Site.Language.Lang "zh" }}查看完整研究经历{{ else }}View full research experience{{ end }} <span aria-hidden="true">→</span></a>
     </section>
   </article>
 {{ end }}

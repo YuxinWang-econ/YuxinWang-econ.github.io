@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.Language.LanguageCode }}">
+<html lang="{{ .Site.Language.Locale }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
     <link rel="canonical" href="{{ .Permalink }}">
     {{ range .AllTranslations }}
-      <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+      <link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">
     {{ end }}
     <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
   </head>

@@ -13,6 +13,7 @@ experience:
     - "International Trade"
     - "Industrial Policy"
   output: "NBER Working Paper"
+  output_url: "/uploads/w34744.pdf"
   description: "This project studies how governments design industrial policies and how these policies affect firms and industries."
 ---
 

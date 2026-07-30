@@ -13,6 +13,7 @@ experience:
     - "国际贸易"
     - "产业政策"
   output: "NBER 工作论文"
+  output_url: "/uploads/w34744.pdf"
   description: "本项目研究政府如何设计产业政策，以及这些政策如何影响企业与产业。"
 ---
 

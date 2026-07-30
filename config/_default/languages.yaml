@@ -1,6 +1,6 @@
 en:
-  languageCode: en
-  languageName: English
+  locale: en
+  label: English
   weight: 1
   title: Yuxin Wang
   params:
@@ -21,8 +21,8 @@ en:
         weight: 40
 
 zh:
-  languageCode: zh-Hans
-  languageName: 中文
+  locale: zh-Hans
+  label: 中文
   weight: 2
   title: 王雨鑫
   params:

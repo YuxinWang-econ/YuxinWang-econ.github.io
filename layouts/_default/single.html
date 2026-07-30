@@ -25,8 +25,8 @@
               <dd>{{ delimit .areas ", " }}</dd>
             </div>
             <div>
-              <dt>{{ if eq $.Site.Language.Lang "zh" }}研究成果{{ else }}Output{{ end }}</dt>
-              <dd>{{ .output }}</dd>
+              <dt>{{ if eq $.Site.Language.Lang "zh" }}相关成果{{ else }}Related Output{{ end }}</dt>
+              <dd><a class="output-link" href="{{ .output_url }}" target="_blank" rel="noopener noreferrer">{{ .output }}</a></dd>
             </div>
           </dl>
         </div>
