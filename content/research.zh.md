@@ -2,19 +2,11 @@
 title: "研究"
 summary: "王雨鑫的研究方向与研究经历。"
 experience:
-  title: "产业政策的政治经济学"
-  institution: "清华大学"
-  position: "研究助理"
-  supervisors:
-    - "鞠建东 教授"
-    - "李云坤 教授"
-  areas:
-    - "政治经济学"
-    - "国际贸易"
-    - "产业政策"
-  output: "NBER 工作论文"
-  output_url: "/uploads/w34744.pdf"
-  description: "本项目研究政府如何设计产业政策，以及这些政策如何影响企业与产业。"
+  title: "The United States as an Active Industrial Policy Nation"
+  role: "研究助理，清华大学"
+  supervisors: "鞠建东、李云坤"
+  paper_label: "NBER Working Paper 34744"
+  paper_url: "https://www.nber.org/papers/w34744"
+  pdf_url: "/uploads/w34744.pdf"
+  description: "该论文系统梳理了1973年至2022年美国联邦层面的产业政策，分析其制度设计及其对资源配置的经济影响。"
 ---
-
-我的研究兴趣集中于政治经济学、国际贸易与产业政策。我关注政府如何设计经济政策，以及这些政策如何影响企业、产业与市场。

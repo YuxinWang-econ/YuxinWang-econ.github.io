@@ -2,19 +2,11 @@
 title: "Research"
 summary: "Research experience and interests of Yuxin Wang."
 experience:
-  title: "Political Economy of Industrial Policy"
-  institution: "Tsinghua University"
-  position: "Research Assistant"
-  supervisors:
-    - "Prof. Jiandong Ju"
-    - "Prof. Yunkun Li"
-  areas:
-    - "Political Economy"
-    - "International Trade"
-    - "Industrial Policy"
-  output: "NBER Working Paper"
-  output_url: "/uploads/w34744.pdf"
-  description: "This project studies how governments design industrial policies and how these policies affect firms and industries."
+  title: "The United States as an Active Industrial Policy Nation"
+  role: "Research Assistant, Tsinghua University"
+  supervisors: "Jiandong Ju and Yunkun Li"
+  paper_label: "NBER Working Paper 34744"
+  paper_url: "https://www.nber.org/papers/w34744"
+  pdf_url: "/uploads/w34744.pdf"
+  description: "The paper documents the scope and design of U.S. federal industrial policies from 1973 to 2022 and examines their economic significance for resource allocation."
 ---
-
-My research interests lie in political economy, international trade, and industrial policy. I study how governments design economic policies and how these policies affect firms, industries, and markets.

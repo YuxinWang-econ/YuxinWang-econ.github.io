@@ -1,6 +1,6 @@
 # Yuxin Wang Academic Website
 
-This repository contains the bilingual HugoBlox academic website for Yuxin Wang.
+This repository contains the bilingual Hugo academic website for Yuxin Wang.
 
 ## Run locally on macOS
 
@@ -37,7 +37,7 @@ The initial deployment uses the default address:
 5. Leave **Custom domain** empty during the initial deployment.
 6. Run the **Deploy website to GitHub Pages** workflow, or push a commit to `main`.
 
-The workflow uses the base URL supplied by GitHub Pages, builds the HugoBlox site, and publishes the generated `public` directory. Verify the English and Chinese pages at the default address before beginning custom-domain work.
+The workflow uses the base URL supplied by GitHub Pages, builds the Hugo site, and publishes the generated `public` directory. Verify the English and Chinese pages at the default address before beginning custom-domain work.
 
 ## Configure the custom domain later
 
@@ -69,7 +69,7 @@ All public copy is in Markdown:
 - CV pages: `content/cv.en.md` and `content/cv.zh.md`
 - Contact pages: `content/contact.en.md` and `content/contact.zh.md`
 
-Navigation and language settings are in `config/_default/languages.yaml`. Site metadata and HugoBlox settings are in `config/_default/params.yaml`.
+Navigation and language settings are in `config/_default/languages.yaml`. Shared site settings are in `config/_default/hugo.yaml`.
 
 Replace `static/uploads/Yuxin_Wang_CV.pdf` when the CV changes, keeping the filename unchanged so existing links continue to work.
 

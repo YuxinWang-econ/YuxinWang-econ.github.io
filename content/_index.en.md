@@ -1,34 +1,18 @@
 ---
 title: ""
 summary: "Yuxin Wang is a Research Assistant at Tsinghua University studying political economy, international trade, and industrial policy."
-hero:
-  name: "Yuxin Wang"
-  position: "Research Assistant"
-  institution: "Tsinghua University"
-  fields:
-    - "Political Economy"
-    - "International Trade"
-    - "Industrial Policy"
-  statement: "I study how governments design economic policies and how these policies affect firms, industries, and markets."
-  actions:
-    - label: "Download CV"
-      url: "/uploads/Yuxin_Wang_CV.pdf"
-      download: true
-      style: "primary"
-    - label: "Email"
-      url: "mailto:wangyx356@gmail.com"
-      style: "secondary"
-    - label: "GitHub"
-      url: "https://github.com/YuxinWang-econ"
-      external: true
-      style: "secondary"
-current_research:
-  title: "Political Economy of Industrial Policy"
-  position: "Research Assistant"
-  institution: "Tsinghua University"
-  supervisors:
-    - "Prof. Jiandong Ju"
-    - "Prof. Yunkun Li"
-  output: "NBER Working Paper"
-  output_url: "/uploads/w34744.pdf"
 ---
+
+I am a research assistant at Tsinghua University.
+
+My research interests are in political economy, international trade, and industrial policy. I am interested in how governments design economic policies and how these policies affect firms, industries, and markets.
+
+[View CV](/uploads/Yuxin_Wang_CV.pdf)
+
+---
+
+## Contact
+
+**Email:** [wangyx356@gmail.com](mailto:wangyx356@gmail.com)
+
+**GitHub:** [github.com/YuxinWang-econ](https://github.com/YuxinWang-econ)

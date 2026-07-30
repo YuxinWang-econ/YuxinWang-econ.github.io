@@ -4,37 +4,28 @@
       <h1>{{ .Title }}</h1>
     </header>
 
-    <div class="page-content">
-      {{ .Content }}
-    </div>
-
     {{ with .Params.experience }}
       <section class="research-experience" aria-labelledby="research-experience-title">
         <h2 id="research-experience-title">{{ if eq $.Site.Language.Lang "zh" }}研究经历{{ else }}Research Experience{{ end }}</h2>
-        <div class="research-entry detailed">
+        <article class="research-entry">
           <h3>{{ .title }}</h3>
-          <p class="entry-role">{{ .position }}<br>{{ .institution }}</p>
-          <p>{{ .description }}</p>
-          <dl>
-            <div>
-              <dt>{{ if eq $.Site.Language.Lang "zh" }}指导教授{{ else }}Supervisors{{ end }}</dt>
-              <dd>{{ delimit .supervisors "<br>" | safeHTML }}</dd>
-            </div>
-            <div>
-              <dt>{{ if eq $.Site.Language.Lang "zh" }}研究领域{{ else }}Research Areas{{ end }}</dt>
-              <dd>{{ delimit .areas ", " }}</dd>
-            </div>
-            <div>
-              <dt>{{ if eq $.Site.Language.Lang "zh" }}相关成果{{ else }}Related Output{{ end }}</dt>
-              <dd><a class="output-link" href="{{ .output_url }}" target="_blank" rel="noopener noreferrer">{{ .output }}</a></dd>
-            </div>
-          </dl>
-        </div>
+          <p class="entry-role">{{ .role }}</p>
+          <p>{{ if eq $.Site.Language.Lang "zh" }}指导教师：{{ else }}Supervisors: {{ end }}{{ .supervisors }}</p>
+          <p>{{ if eq $.Site.Language.Lang "zh" }}相关公开研究：{{ else }}Related public research: {{ end }}<a href="{{ .paper_url }}" target="_blank" rel="noopener noreferrer">{{ .paper_label }}</a> · <a href="{{ .pdf_url }}">{{ if eq $.Site.Language.Lang "zh" }}PDF 原文{{ else }}PDF{{ end }}</a></p>
+          <p class="research-description">{{ .description }}</p>
+        </article>
       </section>
-    {{ end }}
-
-    {{ with .Params.download }}
-      <p class="download-action"><a class="button primary" href="{{ .url }}" download>{{ .label }}</a></p>
+    {{ else }}
+      {{ with .Params.cv_url }}
+        <div class="cv-links">
+          <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ if eq $.Site.Language.Lang "zh" }}查看简历{{ else }}View CV{{ end }}</a>
+          <a href="{{ . }}" download>{{ if eq $.Site.Language.Lang "zh" }}下载简历{{ else }}Download CV{{ end }}</a>
+        </div>
+      {{ else }}
+        <div class="page-content">
+          {{ $.Content }}
+        </div>
+      {{ end }}
     {{ end }}
   </article>
 {{ end }}

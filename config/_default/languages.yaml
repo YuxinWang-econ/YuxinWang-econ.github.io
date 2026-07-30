@@ -5,6 +5,8 @@ en:
   title: Yuxin Wang
   params:
     description: Academic website of Yuxin Wang, Research Assistant at Tsinghua University.
+    position: Research Assistant
+    institution: Tsinghua University
   menus:
     main:
       - name: Home
@@ -27,6 +29,8 @@ zh:
   title: 王雨鑫
   params:
     description: 清华大学研究助理王雨鑫的学术主页。
+    position: 研究助理
+    institution: 清华大学
   menus:
     main:
       - name: 首页
@@ -38,6 +42,6 @@ zh:
       - name: 简历
         pageRef: /cv
         weight: 30
-      - name: 联系
+      - name: 联系方式
         pageRef: /contact
         weight: 40

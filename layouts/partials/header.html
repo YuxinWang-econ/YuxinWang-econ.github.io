@@ -1,17 +1,16 @@
-<header class="site-header">
-  <div class="header-inner">
+<header class="site-sidebar">
+  <div class="identity">
     <a class="site-name" href="{{ relLangURL "/" }}">{{ .Site.Title }}</a>
-    <nav class="site-nav" aria-label="{{ if eq .Site.Language.Lang "zh" }}主导航{{ else }}Primary navigation{{ end }}">
-      {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
-      {{ end }}
-    </nav>
-    <nav class="language-nav" aria-label="{{ if eq .Site.Language.Lang "zh" }}语言选择{{ else }}Language selection{{ end }}">
-      {{ if eq .Site.Language.Lang "en" }}
-        <span aria-current="true">English</span><span aria-hidden="true">|</span><a lang="zh-Hans" href="{{ if .IsHome }}/zh/{{ else }}{{ with index .Translations 0 }}{{ .RelPermalink }}{{ else }}/zh/{{ end }}{{ end }}">中文</a>
-      {{ else }}
-        <a lang="en" href="{{ if .IsHome }}/{{ else }}{{ with index .Translations 0 }}{{ .RelPermalink }}{{ else }}/{{ end }}{{ end }}">English</a><span aria-hidden="true">|</span><span aria-current="true">中文</span>
-      {{ end }}
-    </nav>
+    <p>{{ .Site.Params.position }}<br>{{ .Site.Params.institution }}</p>
   </div>
+  <nav class="site-nav" aria-label="{{ if eq .Site.Language.Lang "zh" }}主导航{{ else }}Primary navigation{{ end }}">
+    {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+    {{ end }}
+    {{ if eq .Site.Language.Lang "en" }}
+      <a lang="zh-Hans" href="{{ if .IsHome }}/zh/{{ else }}{{ with index .Translations 0 }}{{ .RelPermalink }}{{ else }}/zh/{{ end }}{{ end }}">中文</a>
+    {{ else }}
+      <a lang="en" href="{{ if .IsHome }}/{{ else }}{{ with index .Translations 0 }}{{ .RelPermalink }}{{ else }}/{{ end }}{{ end }}">English</a>
+    {{ end }}
+  </nav>
 </header>
