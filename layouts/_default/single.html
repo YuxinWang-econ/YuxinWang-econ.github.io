@@ -1,0 +1,40 @@
+{{ define "main" }}
+  <article class="page">
+    <header class="page-header">
+      <h1>{{ .Title }}</h1>
+    </header>
+
+    <div class="page-content">
+      {{ .Content }}
+    </div>
+
+    {{ with .Params.experience }}
+      <section class="research-experience" aria-labelledby="research-experience-title">
+        <h2 id="research-experience-title">{{ if eq $.Site.Language.Lang "zh" }}研究经历{{ else }}Research Experience{{ end }}</h2>
+        <div class="research-entry detailed">
+          <h3>{{ .title }}</h3>
+          <p class="entry-role">{{ .position }}<br>{{ .institution }}</p>
+          <p>{{ .description }}</p>
+          <dl>
+            <div>
+              <dt>{{ if eq $.Site.Language.Lang "zh" }}指导教授{{ else }}Supervisors{{ end }}</dt>
+              <dd>{{ delimit .supervisors "<br>" | safeHTML }}</dd>
+            </div>
+            <div>
+              <dt>{{ if eq $.Site.Language.Lang "zh" }}研究领域{{ else }}Research Areas{{ end }}</dt>
+              <dd>{{ delimit .areas ", " }}</dd>
+            </div>
+            <div>
+              <dt>{{ if eq $.Site.Language.Lang "zh" }}研究成果{{ else }}Output{{ end }}</dt>
+              <dd>{{ .output }}</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    {{ end }}
+
+    {{ with .Params.download }}
+      <p class="download-action"><a class="button primary" href="{{ .url }}" download>{{ .label }}</a></p>
+    {{ end }}
+  </article>
+{{ end }}

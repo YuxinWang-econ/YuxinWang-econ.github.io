@@ -1,0 +1,37 @@
+{{ define "main" }}
+  <article class="home-page">
+    <section class="hero" aria-labelledby="hero-name">
+      <p class="eyebrow">{{ .Params.hero.position }}<br>{{ .Params.hero.institution }}</p>
+      <h1 id="hero-name">{{ .Params.hero.name }}</h1>
+      <p class="research-fields">{{ .Params.hero.interests }}</p>
+      <p class="statement">{{ .Params.hero.statement }}</p>
+      <div class="actions">
+        {{ range .Params.hero.actions }}
+          <a class="button" href="{{ .url }}"{{ if .download }} download{{ end }}{{ if .external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .label }}</a>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="home-content">
+      {{ .Content }}
+    </section>
+
+    <section class="current-research" aria-labelledby="current-research-title">
+      <h2 id="current-research-title">{{ if eq .Site.Language.Lang "zh" }}当前研究{{ else }}Current Research{{ end }}</h2>
+      <div class="research-entry">
+        <h3>{{ .Params.current_research.title }}</h3>
+        <p class="entry-role">{{ .Params.current_research.position }}<br>{{ .Params.current_research.institution }}</p>
+        <dl>
+          <div>
+            <dt>{{ if eq .Site.Language.Lang "zh" }}指导教授{{ else }}Supervisors{{ end }}</dt>
+            <dd>{{ delimit .Params.current_research.supervisors "<br>" | safeHTML }}</dd>
+          </div>
+          <div>
+            <dt>{{ if eq .Site.Language.Lang "zh" }}研究成果{{ else }}Output{{ end }}</dt>
+            <dd>{{ .Params.current_research.output }}</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </article>
+{{ end }}

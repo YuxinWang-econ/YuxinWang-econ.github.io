@@ -1,0 +1,22 @@
+title: "Yuxin Wang"
+baseURL: "https://yuxinwang-econ.github.io/"
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+hasCJKLanguage: true
+removePathAccents: true
+
+enableRobotsTXT: true
+enableGitInfo: false
+disableKinds:
+  - taxonomy
+  - term
+
+outputs:
+  home:
+    - HTML
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false

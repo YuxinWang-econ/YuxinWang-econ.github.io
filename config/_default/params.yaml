@@ -1,0 +1,44 @@
+hugoblox:
+  schema: "2.0"
+  identity:
+    name: "Yuxin Wang"
+    type: person
+    tagline: "Research Assistant at Tsinghua University"
+    description: "Academic website of Yuxin Wang, an economics researcher working on political economy, international trade, and industrial policy."
+  theme:
+    mode: light
+    pack: default
+    colors:
+      primary: "#17324d"
+      neutral: "#334155"
+    surfaces:
+      background: "#ffffff"
+      foreground: "#17202a"
+  typography:
+    pack: academic
+  layout:
+    radius: none
+    spacing: spacious
+  header:
+    enable: true
+    style: minimal
+    sticky: false
+    search: false
+    theme_toggle: false
+    theme_picker: false
+    language_switcher: true
+  footer:
+    style: minimal
+    language_switcher: false
+  search:
+    enable: false
+  comments:
+    enable: false
+  analytics:
+    google:
+      measurement_id: ""
+  repository:
+    enable: false
+    url: "https://github.com/YuxinWang-econ/YuxinWang-econ.github.io"
+    branch: main
+    content_dir: content

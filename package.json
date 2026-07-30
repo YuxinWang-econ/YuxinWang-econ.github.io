@@ -1,0 +1,10 @@
+{
+  "name": "yuxinwang-econ-academic-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bilingual academic personal website for Yuxin Wang",
+  "scripts": {
+    "dev": "hugo server --disableFastRender",
+    "build": "hugo --gc --minify"
+  }
+}
