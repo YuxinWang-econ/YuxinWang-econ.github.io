@@ -49,10 +49,10 @@ a:focus-visible {
 .site-shell {
   width: min(calc(100% - 48px), 1040px);
   margin: 0 auto;
-  padding: 78px 0 90px;
+  padding: 62px 0 90px;
   display: grid;
   grid-template-columns: 250px minmax(0, 700px);
-  gap: clamp(64px, 9vw, 110px);
+  gap: clamp(60px, 7vw, 88px);
 }
 
 .site-sidebar {
@@ -100,6 +100,7 @@ a:focus-visible {
   text-underline-offset: 0.25em;
 }
 
+.content-column,
 #main-content {
   min-width: 0;
 }
@@ -112,6 +113,7 @@ a:focus-visible {
 .home-content {
   padding-top: 3px;
   font-size: 1.04rem;
+  line-height: 1.75;
 }
 
 .home-content > p {
@@ -119,14 +121,12 @@ a:focus-visible {
 }
 
 .home-content > p:first-child {
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  line-height: 1.55;
+  max-width: 680px;
 }
 
 .home-content hr {
   height: 1px;
-  margin: 38px 0 30px;
+  margin: 34px 0 27px;
   border: 0;
   background: var(--line);
 }
@@ -156,7 +156,7 @@ h3 {
 }
 
 .page-header {
-  margin-bottom: 42px;
+  margin-bottom: 38px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--line);
 }
@@ -173,19 +173,24 @@ h3 {
 }
 
 .research-experience h2 {
-  margin: 0 0 25px;
+  margin: 0 0 22px;
   font-size: 1.45rem;
   line-height: 1.3;
 }
 
 .research-entry {
-  padding-top: 24px;
+  padding-top: 0;
+}
+
+.research-entry + .research-entry {
+  margin-top: 34px;
+  padding-top: 30px;
   border-top: 1px solid var(--line);
 }
 
 .research-entry h3 {
   max-width: 650px;
-  margin-bottom: 13px;
+  margin-bottom: 9px;
   font-size: clamp(1.3rem, 3vw, 1.45rem);
   line-height: 1.38;
 }
@@ -195,14 +200,47 @@ h3 {
   font-size: 0.96rem;
 }
 
-.research-entry .entry-role {
+.research-authors,
+.research-publication {
   color: var(--muted);
+}
+
+.research-entry .research-authors {
+  margin-bottom: 4px;
+  font-size: 0.92rem;
+}
+
+.research-entry .research-publication {
+  font-size: 0.92rem;
+}
+
+.research-publication em {
+  font-style: italic;
+}
+
+.research-role {
+  margin-top: 19px;
+}
+
+.research-role p {
+  margin-bottom: 4px;
+}
+
+.research-role strong {
+  font-weight: 650;
 }
 
 .research-entry .research-description {
   max-width: 650px;
-  margin-top: 22px;
+  margin-top: 18px;
   line-height: 1.72;
+}
+
+.site-footer {
+  margin-top: 68px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.6;
 }
 
 .cv-links {
@@ -215,9 +253,9 @@ h3 {
 @media (max-width: 760px) {
   .site-shell {
     width: min(calc(100% - 36px), 700px);
-    padding: 42px 0 64px;
+    padding: 38px 0 64px;
     grid-template-columns: minmax(0, 1fr);
-    gap: 48px;
+    gap: 42px;
   }
 
   .site-sidebar {
@@ -249,7 +287,7 @@ h3 {
 
   .site-shell {
     width: min(calc(100% - 30px), 700px);
-    padding-top: 34px;
+    padding-top: 30px;
   }
 
   .site-nav {

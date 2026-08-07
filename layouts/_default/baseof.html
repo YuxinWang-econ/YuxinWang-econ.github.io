@@ -14,9 +14,14 @@
   <body>
     <div class="site-shell">
       {{ partial "header.html" . }}
-      <main id="main-content">
-        {{ block "main" . }}{{ end }}
-      </main>
+      <div class="content-column">
+        <main id="main-content">
+          {{ block "main" . }}{{ end }}
+        </main>
+        <footer class="site-footer">
+          {{ if eq .Site.Language.Lang "zh" }}© 2026 Yuxin Wang · 更新于 2026年8月{{ else }}© 2026 Yuxin Wang · Last updated August 2026{{ end }}
+        </footer>
+      </div>
     </div>
   </body>
 </html>

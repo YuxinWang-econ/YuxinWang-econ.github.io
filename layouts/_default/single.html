@@ -9,9 +9,12 @@
         <h2 id="research-experience-title">{{ if eq $.Site.Language.Lang "zh" }}研究经历{{ else }}Research Experience{{ end }}</h2>
         <article class="research-entry">
           <h3>{{ .title }}</h3>
-          <p class="entry-role">{{ .role }}</p>
-          <p>{{ if eq $.Site.Language.Lang "zh" }}指导教师：{{ else }}Supervisors: {{ end }}{{ .supervisors }}</p>
-          <p>{{ if eq $.Site.Language.Lang "zh" }}相关公开研究：{{ else }}Related public research: {{ end }}<a href="{{ .paper_url }}" target="_blank" rel="noopener noreferrer">{{ .paper_label }}</a> · <a href="{{ .pdf_url }}">{{ if eq $.Site.Language.Lang "zh" }}PDF 原文{{ else }}PDF{{ end }}</a></p>
+          <p class="research-authors">{{ .authors }}</p>
+          <p class="research-publication"><em>{{ .paper_label }}</em> · <a href="{{ .paper_url }}" target="_blank" rel="noopener noreferrer">NBER</a> · <a href="{{ .pdf_url }}">PDF</a></p>
+          <div class="research-role">
+            <p><strong>{{ .role }}</strong>{{ if eq $.Site.Language.Lang "zh" }}，{{ else }}, {{ end }}{{ .institution }}</p>
+            <p>{{ if eq $.Site.Language.Lang "zh" }}导师：{{ else }}Supervisors: {{ end }}{{ .supervisors }}</p>
+          </div>
           <p class="research-description">{{ .description }}</p>
         </article>
       </section>
