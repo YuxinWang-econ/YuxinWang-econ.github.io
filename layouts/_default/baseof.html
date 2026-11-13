@@ -6,9 +6,6 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
     <link rel="canonical" href="{{ .Permalink }}">
-    {{ range .AllTranslations }}
-      <link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">
-    {{ end }}
     <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
   </head>
   <body>
@@ -19,7 +16,7 @@
           {{ block "main" . }}{{ end }}
         </main>
         <footer class="site-footer">
-          {{ if eq .Site.Language.Lang "zh" }}© 2026 Yuxin Wang · 更新于 2026年8月{{ else }}© 2026 Yuxin Wang · Last updated August 2026{{ end }}
+          © 2026 Yuxin Wang · Last updated November 2026
         </footer>
       </div>
     </div>

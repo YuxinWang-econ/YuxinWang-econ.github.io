@@ -3,7 +3,6 @@ baseURL: "https://yuxinwang-econ.github.io/"
 
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: false
-hasCJKLanguage: true
 removePathAccents: true
 
 enableRobotsTXT: true

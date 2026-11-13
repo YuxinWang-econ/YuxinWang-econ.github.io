@@ -1,6 +1,6 @@
 # Yuxin Wang Academic Website
 
-This repository contains the bilingual Hugo academic website for Yuxin Wang.
+This repository contains the English-language Hugo academic website for Yuxin Wang.
 
 ## Run locally on macOS
 
@@ -22,7 +22,7 @@ From this repository, start the local site:
 hugo server
 ```
 
-Open `http://localhost:1313/` for English or `http://localhost:1313/zh/` for Chinese.
+Open `http://localhost:1313/` to preview the site.
 
 ## Deploy to GitHub Pages
 
@@ -37,7 +37,7 @@ The initial deployment uses the default address:
 5. Leave **Custom domain** empty during the initial deployment.
 6. Run the **Deploy website to GitHub Pages** workflow, or push a commit to `main`.
 
-The workflow uses the base URL supplied by GitHub Pages, builds the Hugo site, and publishes the generated `public` directory. Verify the English and Chinese pages at the default address before beginning custom-domain work.
+The workflow uses the base URL supplied by GitHub Pages, builds the Hugo site, and publishes the generated `public` directory. Verify the site at the default address before beginning custom-domain work.
 
 ## Configure the custom domain later
 
@@ -64,12 +64,11 @@ After the custom domain is active, change `baseURL` in `config/_default/hugo.yam
 All public copy is in Markdown:
 
 - English homepage: `content/_index.en.md`
-- Chinese homepage: `content/_index.zh.md`
-- Research pages: `content/research.en.md` and `content/research.zh.md`
-- CV pages: `content/cv.en.md` and `content/cv.zh.md`
-- Contact pages: `content/contact.en.md` and `content/contact.zh.md`
+- Research page: `content/research.en.md`
+- CV page: `content/cv.en.md`
+- Contact page: `content/contact.en.md`
 
-Navigation and language settings are in `config/_default/languages.yaml`. Shared site settings are in `config/_default/hugo.yaml`.
+Navigation and identity settings are in `config/_default/languages.yaml`. Shared site settings are in `config/_default/hugo.yaml`. The site publishes English pages only.
 
 Replace `static/uploads/Yuxin_Wang_CV.pdf` when the CV changes, keeping the filename unchanged so existing links continue to work.
 

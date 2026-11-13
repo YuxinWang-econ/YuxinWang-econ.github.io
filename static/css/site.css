@@ -51,8 +51,8 @@ a:focus-visible {
   margin: 0 auto;
   padding: 62px 0 90px;
   display: grid;
-  grid-template-columns: 250px minmax(0, 700px);
-  gap: clamp(60px, 7vw, 88px);
+  grid-template-columns: 220px minmax(0, 760px);
+  gap: clamp(40px, 5vw, 64px);
 }
 
 .site-sidebar {
@@ -107,21 +107,17 @@ a:focus-visible {
 
 .home-content,
 .page {
-  max-width: 700px;
+  max-width: 760px;
 }
 
 .home-content {
   padding-top: 3px;
-  font-size: 1.04rem;
+  font-size: max(16px, 0.95rem);
   line-height: 1.75;
 }
 
 .home-content > p {
   margin: 0 0 1.4em;
-}
-
-.home-content > p:first-child {
-  max-width: 680px;
 }
 
 .home-content hr {

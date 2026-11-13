@@ -1,9 +1,13 @@
 ---
 title: ""
-summary: "Yuxin Wang is a Research Assistant at Tsinghua University studying international trade, industrial policy, and the political and institutional forces that shape policy design."
+summary: "Yuxin Wang is a Research Assistant at Tsinghua University, with research interests in political economy, industrial policy, and international trade."
 ---
 
-I am a research assistant at Tsinghua University. My research focuses on the intersection of international trade and industrial policy. I am interested in how industrial policy operates in open economies—how different policy instruments interact with trade, reshape production and supply chains, and affect firms' decisions. I am also interested in the political and institutional forces that shape the design of these policies.
+I received my Bachelor of Economics from Sun Yat-sen University in 2025 and am currently a research assistant at Tsinghua University, working with Jiandong Ju and Yuankun Li. My current work examines the political economy of U.S. industrial policy, particularly how government support is allocated across industries.
+
+Previously, I worked as a research assistant at the University of Hong Kong and Sun Yat-sen University, contributing to empirical research on public-sector employment and workplace safety regulation.
+
+My research interests lie in political economy, industrial policy, and international trade. I am particularly interested in how political incentives shape economic policies and how firms and industries respond to government intervention.
 
 [View CV](/uploads/Yuxin_Wang_CV.pdf)
 

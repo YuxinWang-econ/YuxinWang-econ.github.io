@@ -6,14 +6,14 @@
 
     {{ with .Params.experience }}
       <section class="research-experience" aria-labelledby="research-experience-title">
-        <h2 id="research-experience-title">{{ if eq $.Site.Language.Lang "zh" }}研究经历{{ else }}Research Experience{{ end }}</h2>
+        <h2 id="research-experience-title">Research Experience</h2>
         <article class="research-entry">
           <h3>{{ .title }}</h3>
           <p class="research-authors">{{ .authors }}</p>
           <p class="research-publication"><em>{{ .paper_label }}</em> · <a href="{{ .paper_url }}" target="_blank" rel="noopener noreferrer">NBER</a> · <a href="{{ .pdf_url }}">PDF</a></p>
           <div class="research-role">
-            <p><strong>{{ .role }}</strong>{{ if eq $.Site.Language.Lang "zh" }}，{{ else }}, {{ end }}{{ .institution }}</p>
-            <p>{{ if eq $.Site.Language.Lang "zh" }}导师：{{ else }}Supervisors: {{ end }}{{ .supervisors }}</p>
+            <p><strong>{{ .role }}</strong>, {{ .institution }}</p>
+            <p>Supervisors: {{ .supervisors }}</p>
           </div>
           <p class="research-description">{{ .description }}</p>
         </article>
@@ -21,8 +21,8 @@
     {{ else }}
       {{ with .Params.cv_url }}
         <div class="cv-links">
-          <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ if eq $.Site.Language.Lang "zh" }}查看简历{{ else }}View CV{{ end }}</a>
-          <a href="{{ . }}" download>{{ if eq $.Site.Language.Lang "zh" }}下载简历{{ else }}Download CV{{ end }}</a>
+          <a href="{{ . }}" target="_blank" rel="noopener noreferrer">View CV</a>
+          <a href="{{ . }}" download>Download CV</a>
         </div>
       {{ else }}
         <div class="page-content">
